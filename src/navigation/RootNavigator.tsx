@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { setStatusBarStyle } from "expo-status-bar"
 import { useTheme } from "native-base"
 import { useEffect } from "react"
+import { ModalScreen } from "../screens"
 import { RootStackParamList } from "../types/Navigation"
 import TabNavigator from "./TabNavigator"
 
@@ -35,6 +36,12 @@ export default function RootNavigator() {
           name="Main"
           component={TabNavigator}
         />
+        {/* A Group for modals and overlays */}
+        <Stack.Group
+          screenOptions={{ headerShown: false, presentation: "modal" }}
+        >
+          <Stack.Screen name="Modal" component={ModalScreen} />
+        </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
   )

@@ -1,7 +1,8 @@
-import { NavigationProp } from "@react-navigation/native"
+import { NavigationProp, RouteProp } from "@react-navigation/native"
 
 export type RootStackParamList = {
   Main: undefined
+  Modal: { message: string }
 }
 
 export type TabParamList = {
@@ -14,3 +15,8 @@ export type TabParamList = {
 export type TabNavigationProp = NavigationProp<TabParamList>
 
 export type RootNavigationProp = NavigationProp<RootStackParamList>
+
+export type RootScreenProp<Screen extends keyof RootStackParamList> = RouteProp<
+  RootStackParamList,
+  Screen
+>
