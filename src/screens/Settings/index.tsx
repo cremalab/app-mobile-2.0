@@ -1,7 +1,7 @@
 import { useRoute } from "@react-navigation/native"
 import { Box, Text } from "native-base"
 
-export default function HomeScreen() {
+export default function SettingsScreen() {
   const { name } = useRoute()
 
   return (
