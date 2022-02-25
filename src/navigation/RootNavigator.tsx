@@ -32,6 +32,7 @@ export default function RootNavigator() {
   return (
     <NavigationContainer theme={navigationTheme}>
       <Stack.Navigator>
+        {/* Comment in TabNavigator - Be sure to delete or comment out DrawerNavigator */}
         {/* <Stack.Screen
           options={{ headerShown: false }}
           name="Main"
