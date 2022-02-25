@@ -43,6 +43,8 @@ This project includes configuration and tooling that conforms to Crema's baselin
 
 ## 👟👟 First Steps - Customizing Your App
 
+Please note, expo-splash-screen has known issues on android, if after running the below script an error is thrown, read here on how to manually set the splash screen for android.
+
 1. Run the following script: `npm run makeityours` and follow the prompts. <span style="color: #CD5C5C">This will delete and replace ./ios ./android and app.json</span>
 2. [Customize Icon](https://github.com/martiliones/icon-set-creator): `npm run customize:icon <your-icon-path>`
 3. Customize SplashScreen: `npm run customize:splashscreen [options]` Click [here](https://github.com/expo/expo-cli/tree/master/unlinked-packages/configure-splash-screen#-usage) to see all available options.
