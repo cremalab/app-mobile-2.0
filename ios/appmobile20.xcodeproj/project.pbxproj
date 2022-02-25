@@ -345,7 +345,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.appmobile20;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app-mobile";
 				PRODUCT_NAME = appmobile20;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -368,7 +368,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.appmobile20;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app-mobile";
 				PRODUCT_NAME = appmobile20;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
