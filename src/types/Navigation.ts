@@ -12,6 +12,13 @@ export type TabParamList = {
   Settings: undefined
 }
 
+export type DrawerParamList = {
+  Home: undefined
+  Explore: undefined
+  Profile: undefined
+  Settings: undefined
+}
+
 export type TabNavigationProp = NavigationProp<TabParamList>
 
 export type RootNavigationProp = NavigationProp<RootStackParamList>
