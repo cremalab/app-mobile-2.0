@@ -18,7 +18,7 @@ export default function HomeScreen(props: MainStackScreenProp<"Home">) {
 
   return (
     <Center mb={headerHeight} safeArea flex="1">
-      <Box position="absolute" top="24">
+      <Box position="absolute" top={-headerHeight} mt={24}>
         <PresenceTransition
           visible={true}
           initial={{

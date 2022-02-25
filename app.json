@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Crema Mobile Starter",
-    "slug": "Crema Mobile Starter",
+    "name": "CremaMobileStarter",
+    "slug": "CremaMobileStarter",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
@@ -13,5 +13,5 @@
       "bundleIdentifier": "com.cremamobile.starter"
     }
   },
-  "name": "Crema Mobile Starter"
+  "name": "CremaMobileStarter"
 }

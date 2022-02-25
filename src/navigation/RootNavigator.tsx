@@ -6,6 +6,7 @@ import { useEffect } from "react"
 import { ModalScreen } from "../screens"
 import { RootStackParamList } from "../types/Navigation"
 import DrawerNavigator from "./DrawerNavigator"
+// Comment in TabNavigator - Be sure to delete or comment out DrawerNavigator import above
 // import TabNavigator from "./TabNavigator"
 
 export default function RootNavigator() {
