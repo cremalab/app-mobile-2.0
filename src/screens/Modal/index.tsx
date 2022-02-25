@@ -1,20 +1,21 @@
-import { useRoute } from "@react-navigation/native"
-import { Box, Text } from "native-base"
+import { Center, Text } from "native-base"
 import { RootScreenProp } from "../../types/Navigation"
 
-export default function ModalScreen() {
+export default function ModalScreen(props: RootScreenProp<"Modal">) {
   // params example
-  const { name, params } = useRoute<RootScreenProp<"Modal">>()
-  const { message } = params
+  const {
+    name,
+    params: { message },
+  } = props.route
 
   return (
-    <Box safeArea justifyContent="center" alignItems="center" flex="1">
+    <Center safeArea flex="1">
       <Text variant="title3" color="primary.300">
         {name}
       </Text>
       <Text pt="3" color="white">
         {message}
       </Text>
-    </Box>
+    </Center>
   )
 }

@@ -1,15 +1,15 @@
 import { useHeaderHeight } from "@react-navigation/elements"
-import { useNavigation, useRoute } from "@react-navigation/native"
-import { Box, Button, PresenceTransition, Text } from "native-base"
+import { Box, Button, Center, PresenceTransition, Text } from "native-base"
 import CremaLogo from "../../assets/CremaLogo.svg"
-import { RootNavigationProp } from "../../types/Navigation"
+import { MainStackScreenProp } from "../../types/Navigation"
 
-export default function HomeScreen() {
-  const { navigate } = useNavigation<RootNavigationProp>()
-
+export default function HomeScreen(props: MainStackScreenProp<"Home">) {
   const headerHeight = useHeaderHeight()
 
-  const { name } = useRoute()
+  const {
+    route: { name },
+    navigation: { navigate },
+  } = props
 
   const handleOpenModal = () => {
     // navigating and passing params
@@ -17,14 +17,7 @@ export default function HomeScreen() {
   }
 
   return (
-    <Box
-      safeArea
-      justifyContent="center"
-      alignItems="center"
-      flex="1"
-      mx="6"
-      mb={headerHeight}
-    >
+    <Center mb={headerHeight} safeArea flex="1">
       <Box position="absolute" top="24">
         <PresenceTransition
           visible={true}
@@ -51,6 +44,6 @@ export default function HomeScreen() {
       <Button mt="8" onPress={handleOpenModal}>
         Open Modal
       </Button>
-    </Box>
+    </Center>
   )
 }
