@@ -9,24 +9,25 @@ import {
   ProfileScreen,
   SettingsScreen,
 } from "../screens"
-import { DrawerParamList } from "../types/Navigation"
+import { MainStackParamList } from "../types/Navigation"
 
-const Drawer = createDrawerNavigator<DrawerParamList>()
+const Drawer = createDrawerNavigator<MainStackParamList>()
 
 export default function DrawerNavigator() {
   const { colors, space } = useTheme()
 
   const { dispatch } = useNavigation()
 
-  const drawerIconMap: { [key in keyof DrawerParamList]: FeatherIconName } = {
-    Home: "home",
-    Explore: "search",
-    Profile: "user",
-    Settings: "settings",
-  }
+  const drawerIconMap: { [key in keyof MainStackParamList]: FeatherIconName } =
+    {
+      Home: "home",
+      Explore: "search",
+      Profile: "user",
+      Settings: "settings",
+    }
 
   const handleOpenDrawer = () => {
-    dispatch(DrawerActions.openDrawer())
+    dispatch(DrawerActions.toggleDrawer())
   }
 
   return (

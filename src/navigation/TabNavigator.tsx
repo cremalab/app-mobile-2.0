@@ -8,14 +8,14 @@ import {
   ProfileScreen,
   SettingsScreen,
 } from "../screens"
-import { TabParamList } from "../types/Navigation"
+import { MainStackParamList } from "../types/Navigation"
 
 export default function TabNavigator() {
   const { space } = useTheme()
 
-  const Tab = createBottomTabNavigator<TabParamList>()
+  const Tab = createBottomTabNavigator<MainStackParamList>()
 
-  const tabIconMap: { [key in keyof TabParamList]: FeatherIconName } = {
+  const tabIconMap: { [key in keyof MainStackParamList]: FeatherIconName } = {
     Home: "home",
     Explore: "search",
     Profile: "user",
