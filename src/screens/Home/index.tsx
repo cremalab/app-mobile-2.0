@@ -1,6 +1,6 @@
 import { useHeaderHeight } from "@react-navigation/elements"
 import { useNavigation, useRoute } from "@react-navigation/native"
-import { Box, Button, Text } from "native-base"
+import { Box, Button, PresenceTransition, Text } from "native-base"
 import CremaLogo from "../../assets/CremaLogo.svg"
 import { RootNavigationProp } from "../../types/Navigation"
 
@@ -26,7 +26,20 @@ export default function HomeScreen() {
       mb={headerHeight}
     >
       <Box position="absolute" top="24">
-        <CremaLogo />
+        <PresenceTransition
+          visible={true}
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 3000,
+            },
+          }}
+        >
+          <CremaLogo />
+        </PresenceTransition>
       </Box>
       <Text mb="8" variant="title3" color="primary.300">
         {name}
