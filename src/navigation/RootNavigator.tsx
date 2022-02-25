@@ -5,7 +5,8 @@ import { useTheme } from "native-base"
 import { useEffect } from "react"
 import { ModalScreen } from "../screens"
 import { RootStackParamList } from "../types/Navigation"
-import TabNavigator from "./TabNavigator"
+import DrawerNavigator from "./DrawerNavigator"
+// import TabNavigator from "./TabNavigator"
 
 export default function RootNavigator() {
   const { colors } = useTheme()
@@ -31,10 +32,15 @@ export default function RootNavigator() {
   return (
     <NavigationContainer theme={navigationTheme}>
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           options={{ headerShown: false }}
           name="Main"
           component={TabNavigator}
+        /> */}
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Main"
+          component={DrawerNavigator}
         />
         {/* A Group for modals and overlays */}
         <Stack.Group
