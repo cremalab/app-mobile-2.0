@@ -1,10 +1,6 @@
 import { createDrawerNavigator } from "@react-navigation/drawer"
-import {
-  DrawerActions,
-  useNavigation,
-  useTheme,
-} from "@react-navigation/native"
-import { Pressable, Text } from "native-base"
+import { DrawerActions, useNavigation } from "@react-navigation/native"
+import { Pressable, Text, useTheme } from "native-base"
 import { FeatherIcon } from "../components"
 import { FeatherIconName } from "../components/FeatherIcon"
 import {
@@ -18,7 +14,7 @@ import { DrawerParamList } from "../types/Navigation"
 const Drawer = createDrawerNavigator<DrawerParamList>()
 
 export default function DrawerNavigator() {
-  const { colors } = useTheme()
+  const { colors, space } = useTheme()
 
   const { dispatch } = useNavigation()
 
@@ -37,7 +33,7 @@ export default function DrawerNavigator() {
     <Drawer.Navigator
       screenOptions={({ route }) => ({
         headerStyle: {
-          backgroundColor: colors.background,
+          backgroundColor: colors.gray["900"],
           shadowColor: "transparent",
         },
         headerLeft: () => (
@@ -53,9 +49,14 @@ export default function DrawerNavigator() {
             name={drawerIconMap[route.name]}
           />
         ),
+        drawerStyle: {
+          paddingTop: space["8"],
+        },
         drawerLabel: ({ color }) => <Text color={color}>{route.name}</Text>,
         drawerItemStyle: {
           backgroundColor: "transparent",
+          paddingVertical: space["3"],
+          paddingLeft: space["3"],
         },
       })}
     >
