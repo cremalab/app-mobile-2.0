@@ -56,7 +56,7 @@ export default function DrawerNavigator() {
         drawerLabel: ({ color }) => <Text color={color}>{route.name}</Text>,
         drawerItemStyle: {
           backgroundColor: "transparent",
-          paddingVertical: space["3"],
+          paddingVertical: space["1"],
           paddingLeft: space["3"],
         },
       })}
