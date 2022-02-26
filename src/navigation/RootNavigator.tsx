@@ -54,6 +54,7 @@ export default function RootNavigator() {
           screenOptions={{
             headerShown: false,
             presentation: "modal",
+            gestureEnabled: true,
           }}
         >
           <Stack.Screen name="Modal" component={ModalScreen} />
