@@ -7,11 +7,14 @@ This project includes configuration and tooling that conforms to Crema's baselin
 
 ## 🧰 Tools Used
 
+- [![Native Base Logo](./public/assets/nativebase.svg)](https://nativebase.io/) for super quick UI buildouts.
 - [ESLint](https://eslint.org) for code linting
 - [Prettier](https://prettier.io) for code formatting (via ESLint plugin)
 - [TypeScript](http://www.typescriptlang.org) for Static Typing in JavaScript ([Learn](http://www.typescriptlang.org/docs/handbook/basic-types.html))
+- [React Navigation](https://reactnavigation.org/) - for all that navigation goodness
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs/) - for near native performance with animations
 
-## 🏗 Setup
+## 👟👟 First Steps
 
 1. [Install Node/NPM](https://nodejs.org/en/)
 2. [Install NVM](https://github.com/creationix/nvm#installation-and-update) (Node Version Manager)
@@ -41,10 +44,10 @@ This project includes configuration and tooling that conforms to Crema's baselin
 10. Ensure that `adb` is setup correctly, if you have followed step `9` it should be.
     - If `adb --version` outputs a version then you should be good to go.
 
-## 👟👟 First Steps - Customizing Your App
+## 🎨 Customizing Your App
 
-Please note, expo-splash-screen has known issues on android, if after running the below script an error is thrown, read here on how to manually set the splash screen for android.
+Please note, expo-splash-screen has known issues on android, if after running the below script an error is thrown, read [here](https://github.com/expo/expo/tree/main/packages/expo-splash-screen#-configure-android) on how to manually set the splash screen for android.
 
-1. Run the following script: `npm run makeityours` and follow the prompts. <span style="color: #CD5C5C">This will delete and replace ./ios ./android and app.json</span>
+1. Run the following script: `npm run customize:makeityours` and follow the prompts. <span style="color: #CD5C5C">This will delete and replace ./ios ./android and app.json</span>
 2. [Customize Icon](https://github.com/martiliones/icon-set-creator): `npm run customize:icon <your-icon-path>`
 3. Customize SplashScreen: `npm run customize:splashscreen [options]` Click [here](https://github.com/expo/expo-cli/tree/master/unlinked-packages/configure-splash-screen#-usage) to see all available options.
