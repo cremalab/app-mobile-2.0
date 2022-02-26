@@ -1,6 +1,5 @@
 import { useHeaderHeight } from "@react-navigation/elements"
-import { Box, Button, Center, PresenceTransition, Text } from "native-base"
-import CremaLogo from "../../assets/CremaLogo.svg"
+import { Button, Center, Text } from "native-base"
 import { MainStackScreenProp } from "../../types/Navigation"
 
 export default function HomeScreen(props: MainStackScreenProp<"Home">) {
@@ -18,22 +17,6 @@ export default function HomeScreen(props: MainStackScreenProp<"Home">) {
 
   return (
     <Center mb={headerHeight} safeArea flex="1">
-      <Box position="absolute" top="24">
-        <PresenceTransition
-          visible={true}
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-            transition: {
-              duration: 3000,
-            },
-          }}
-        >
-          <CremaLogo />
-        </PresenceTransition>
-      </Box>
       <Text mb="8" variant="title3" color="primary.300">
         {name}
       </Text>

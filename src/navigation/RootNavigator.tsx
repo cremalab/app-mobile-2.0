@@ -3,17 +3,23 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { setStatusBarStyle } from "expo-status-bar"
 import { useTheme } from "native-base"
 import { useEffect } from "react"
+import { Platform } from "react-native"
 import { ModalScreen } from "../screens"
 import { RootStackParamList } from "../types/Navigation"
-import DrawerNavigator from "./DrawerNavigator"
-// import TabNavigator from "./TabNavigator"
+// import DrawerNavigator from "./DrawerNavigator"
+// Comment in TabNavigator - Be sure to delete or comment out DrawerNavigator import above
+import TabNavigator from "./TabNavigator"
 
 export default function RootNavigator() {
   const { colors } = useTheme()
 
+  console.log(colors.gray[900])
+
   useEffect(() => {
-    setStatusBarStyle("light")
-  })
+    Platform.OS === "ios"
+      ? setStatusBarStyle("light")
+      : setStatusBarStyle("dark")
+  }, [])
 
   const Stack = createStackNavigator<RootStackParamList>()
 
@@ -33,19 +39,23 @@ export default function RootNavigator() {
     <NavigationContainer theme={navigationTheme}>
       <Stack.Navigator>
         {/* Comment in TabNavigator - Be sure to delete or comment out DrawerNavigator */}
-        {/* <Stack.Screen
-          options={{ headerShown: false }}
-          name="Main"
-          component={TabNavigator}
-        /> */}
         <Stack.Screen
           options={{ headerShown: false }}
           name="Main"
-          component={DrawerNavigator}
+          component={TabNavigator}
         />
+        {/* <Stack.Screen
+          options={{ headerShown: false }}
+          name="Main"
+          component={DrawerNavigator}
+        /> */}
         {/* A Group for modals and overlays */}
         <Stack.Group
-          screenOptions={{ headerShown: false, presentation: "modal" }}
+          screenOptions={{
+            headerShown: false,
+            presentation: "modal",
+            gestureEnabled: true,
+          }}
         >
           <Stack.Screen name="Modal" component={ModalScreen} />
         </Stack.Group>

@@ -1,8 +1,7 @@
+import { Feather } from "@expo/vector-icons"
 import { createDrawerNavigator } from "@react-navigation/drawer"
 import { DrawerActions, useNavigation } from "@react-navigation/native"
 import { Pressable, Text, useTheme } from "native-base"
-import { FeatherIcon } from "../components"
-import { FeatherIconName } from "../components/FeatherIcon"
 import {
   ExploreScreen,
   HomeScreen,
@@ -11,6 +10,8 @@ import {
 } from "../screens"
 import { MainStackParamList } from "../types/Navigation"
 
+type FeatherIconName = keyof typeof Feather["glyphMap"]
+
 const Drawer = createDrawerNavigator<MainStackParamList>()
 
 export default function DrawerNavigator() {
@@ -18,13 +19,14 @@ export default function DrawerNavigator() {
 
   const { dispatch } = useNavigation()
 
-  const drawerIconMap: { [key in keyof MainStackParamList]: FeatherIconName } =
-    {
-      Home: "home",
-      Explore: "search",
-      Profile: "user",
-      Settings: "settings",
-    }
+  const drawerIconMap: {
+    [key in keyof MainStackParamList]: FeatherIconName
+  } = {
+    Home: "home",
+    Explore: "search",
+    Profile: "user",
+    Settings: "settings",
+  }
 
   const handleOpenDrawer = () => {
     dispatch(DrawerActions.toggleDrawer())
@@ -38,17 +40,18 @@ export default function DrawerNavigator() {
           shadowColor: "transparent",
         },
         headerLeft: () => (
-          <Pressable onPress={handleOpenDrawer}>
-            <FeatherIcon color="primary.700" name="menu" ml="6" />
+          <Pressable ml="6" onPress={handleOpenDrawer}>
+            <Feather
+              color={colors.primary["300"]}
+              name="menu"
+              ml="6"
+              size={24}
+            />
           </Pressable>
         ),
         title: "",
         drawerIcon: ({ color }) => (
-          <FeatherIcon
-            size="6"
-            color={color}
-            name={drawerIconMap[route.name]}
-          />
+          <Feather size={24} color={color} name={drawerIconMap[route.name]} />
         ),
         drawerStyle: {
           paddingTop: space["8"],

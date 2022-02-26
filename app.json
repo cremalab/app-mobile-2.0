@@ -1,11 +1,17 @@
 {
   "expo": {
-    "name": "app-mobile-2.0",
-    "slug": "app-mobile-2.0",
+    "name": "CremaMobileStarter",
+    "slug": "CremaMobileStarter",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.cremamobile.starter"
+    },
+    "ios": {
+      "bundleIdentifier": "com.cremamobile.starter"
+    }
   },
-  "name": "app-mobile-2.0"
+  "name": "CremaMobileStarter"
 }

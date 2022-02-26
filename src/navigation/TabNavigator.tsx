@@ -1,7 +1,6 @@
+import { Feather } from "@expo/vector-icons"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { Text, useTheme } from "native-base"
-import { FeatherIcon } from "../components"
-import { FeatherIconName } from "../components/FeatherIcon"
 import {
   ExploreScreen,
   HomeScreen,
@@ -9,6 +8,8 @@ import {
   SettingsScreen,
 } from "../screens"
 import { MainStackParamList } from "../types/Navigation"
+
+type FeatherIconName = keyof typeof Feather["glyphMap"]
 
 export default function TabNavigator() {
   const { space } = useTheme()
@@ -26,13 +27,16 @@ export default function TabNavigator() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarShowLabel: false,
         tabBarItemStyle: {
           paddingTop: space[1],
         },
-        tabBarLabel: ({ color }) => <Text color={color}>{route.name}</Text>,
+        tabBarLabel: ({ color }) => (
+          <Text variant="tiny" color={color}>
+            {route.name}
+          </Text>
+        ),
         tabBarIcon: ({ color }) => (
-          <FeatherIcon name={tabIconMap[route.name]} size="8" color={color} />
+          <Feather name={tabIconMap[route.name]} size={20} color={color} />
         ),
       })}
     >
