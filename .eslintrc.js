@@ -5,6 +5,14 @@ module.exports = {
     "react-app",
     "plugin:prettier/recommended",
   ],
+  ignorePatterns: [
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "setupTests.ts",
+    "expo-test.js",
+    "__mocks__",
+  ],
   plugins: ["@typescript-eslint", "react", "react-native"],
   rules: {
     "prettier/prettier": "error",
@@ -36,4 +44,4 @@ module.exports = {
       version: "detect", // Tells eslint-plugin-react to automatically detect the version of React to use
     },
   },
-};
+}

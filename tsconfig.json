@@ -23,5 +23,8 @@
     "node_modules",
     "babel.config.js",
     "metro.config.js",
+    "jest.config.js",
+    "./src/setupTests.ts",
+    "__mocks__",
   ]
 }
