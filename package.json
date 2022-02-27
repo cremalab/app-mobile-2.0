@@ -9,6 +9,7 @@
     "customize:splashscreen": "npx run expo-splash-screen",
     "customize:makeityours": "trash './ios' './android' 'app.json' && expo eject --npm",
     "prepush": "npm run test:ci",
+    "prepare": "husky install",
     "test": "npx jest",
     "test:types": "tsc --noEmit",
     "test:unit": "npm run test --",
