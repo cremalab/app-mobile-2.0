@@ -8,11 +8,18 @@ This project includes configuration and tooling that conforms to Crema's baselin
 ## 🧰 Tools Used
 
 - [![Native Base Logo](./public/assets/nativebase.svg)](https://nativebase.io/) for super quick UI buildouts.
+- [@expo/vector-icons](https://docs.expo.dev/guides/icons/#expovector-icons) because we like good type definitions and react-native-vector-icons currently does not have types for its icon names
 - [ESLint](https://eslint.org) for code linting
+- [Expo (Bare Workflow)](https://docs.expo.dev/bare/exploring-bare-workflow/) for leveraging expo modules, including [expo-updates](https://docs.expo.dev/versions/latest/sdk/updates/)
+- [Jest](https://jestjs.io) for unit tests
 - [Prettier](https://prettier.io) for code formatting (via ESLint plugin)
 - [TypeScript](http://www.typescriptlang.org) for Static Typing in JavaScript ([Learn](http://www.typescriptlang.org/docs/handbook/basic-types.html))
+- [react-native-dotenv](https://github.com/goatandsheep/react-native-dotenv) - for using environmental variables with TS support
+- [react-native-svg](react-native-svg) - for creating and using SVGs
 - [React Navigation](https://reactnavigation.org/) - for all that navigation goodness
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs/) - for near native performance with animations
+- [React Native Testing Library](https://callstack.github.io/react-native-testing-library/) for testing react-native components
+- [Storybook](https://storybook.js.org) for component playground
 
 ## 👟👟 First Steps
 
