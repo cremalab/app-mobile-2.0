@@ -48,6 +48,9 @@ This project includes configuration and tooling that conforms to Crema's baselin
 
 Please note, expo-splash-screen has known issues on android, if after running the below script an error is thrown, read [here](https://github.com/expo/expo/tree/main/packages/expo-splash-screen#-configure-android) on how to manually set the splash screen for android.
 
-1. Run the following script: `npm run customize:makeityours` and follow the prompts. **This will delete and replace ./ios ./android and app.json**
+1. To rename your app, including its bundle identifier, package name (android), display name, and app directories, run the following script: `npm run customize:makeityours` and follow the prompts. **This will delete and replace ./ios ./android and app.json**
+
 2. [Customize Icon](https://github.com/martiliones/icon-set-creator): `npm run customize:icon <your-icon-path>`
 3. Customize SplashScreen: `npm run customize:splashscreen [options]` Click [here](https://github.com/expo/expo-cli/tree/master/unlinked-packages/configure-splash-screen#-usage) to see all available options.
+4. The default NativeBase theme is extended [here](./src/theme/index.tsx). Use the existing key/value pairs as suggestions and feel free to cater them towards your app's design system. NativeBase has some excellent defaults that you can get started with as well. If you wish to learn more about customizing the NativeBase theme, you can read more [here](https://docs.nativebase.io/customizing-theme).
+5. The default navigator is a tab navigator, but a drawer navigator has been built out as well. Simply comment it in, and delete references to the tab navigator. We've included 4 screens and a modal to get you started. You can very easily change the names and icons for each screen and start giving your app it's own identity.

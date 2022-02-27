@@ -36,17 +36,12 @@ export default function DrawerNavigator() {
     <Drawer.Navigator
       screenOptions={({ route }) => ({
         headerStyle: {
-          backgroundColor: colors.gray["900"],
+          backgroundColor: colors.gray[900],
           shadowColor: "transparent",
         },
         headerLeft: () => (
           <Pressable ml="6" onPress={handleOpenDrawer}>
-            <Feather
-              color={colors.primary["300"]}
-              name="menu"
-              ml="6"
-              size={24}
-            />
+            <Feather color={colors.primary[300]} name="menu" ml="6" size={24} />
           </Pressable>
         ),
         title: "",
@@ -59,8 +54,8 @@ export default function DrawerNavigator() {
         drawerLabel: ({ color }) => <Text color={color}>{route.name}</Text>,
         drawerItemStyle: {
           backgroundColor: "transparent",
-          paddingVertical: space["1"],
-          paddingLeft: space["3"],
+          paddingVertical: space[1],
+          paddingLeft: space[3],
         },
       })}
     >
