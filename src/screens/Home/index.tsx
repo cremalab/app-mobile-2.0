@@ -25,7 +25,9 @@ export default function HomeScreen(props: MainStackScreenProp<"Home">) {
         to start creating your first app!
       </Text>
       <Button mt="8" onPress={handleOpenModal}>
-        <Text>Open Modal</Text>
+        <Text color="white" variant="small">
+          Open Modal
+        </Text>
       </Button>
     </Center>
   )

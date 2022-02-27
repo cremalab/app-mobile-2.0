@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react-native"
 import React from "react"
-import { TestProvider } from "../../testing"
+import { MockNavigator, TestProvider } from "../../testing"
 import { MainStackParamList } from "../../types/Navigation"
 import ProfileScreen from "."
 
@@ -11,9 +11,12 @@ describe("ProfileScreen", () => {
 
     // Act
     const { getByText } = render(
-      <TestProvider<MainStackParamList>
-        mockedScreen={{ name: "Profile", component: ProfileScreen }}
-      />,
+      <TestProvider>
+        <MockNavigator<MainStackParamList>
+          component={ProfileScreen}
+          name="Profile"
+        />
+      </TestProvider>,
     )
     const receivedTitle = getByText(title)
 
