@@ -6,14 +6,12 @@ import { useEffect } from "react"
 import { Platform } from "react-native"
 import { ModalScreen } from "../screens"
 import { RootStackParamList } from "../types/Navigation"
+// Comment in DrawerNavigator - Be sure to delete or comment out TabNavigator import below
 // import DrawerNavigator from "./DrawerNavigator"
-// Comment in TabNavigator - Be sure to delete or comment out DrawerNavigator import above
 import TabNavigator from "./TabNavigator"
 
 export default function RootNavigator() {
   const { colors } = useTheme()
-
-  console.log(colors.gray[900])
 
   useEffect(() => {
     Platform.OS === "ios"
@@ -23,14 +21,16 @@ export default function RootNavigator() {
 
   const Stack = createStackNavigator<RootStackParamList>()
 
+  const { background, border, card, notification, primary, text } = colors
+
   const navigationTheme: Theme = {
     colors: {
-      background: colors.gray[900],
-      border: colors.gray[800],
-      card: colors.gray[700],
-      notification: colors.danger[300],
-      primary: colors.primary[300],
-      text: colors.white,
+      background,
+      border,
+      card,
+      notification,
+      primary,
+      text,
     },
     dark: true,
   }
@@ -38,12 +38,12 @@ export default function RootNavigator() {
   return (
     <NavigationContainer theme={navigationTheme}>
       <Stack.Navigator>
-        {/* Comment in TabNavigator - Be sure to delete or comment out DrawerNavigator */}
         <Stack.Screen
           options={{ headerShown: false }}
           name="Main"
           component={TabNavigator}
         />
+        {/* Comment in DrawerNavigator - Be sure to delete or comment out TabNavigator */}
         {/* <Stack.Screen
           options={{ headerShown: false }}
           name="Main"
