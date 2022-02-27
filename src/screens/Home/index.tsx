@@ -17,15 +17,15 @@ export default function HomeScreen(props: MainStackScreenProp<"Home">) {
 
   return (
     <Center mb={headerHeight} safeArea flex="1">
-      <Text mb="8" variant="title3" color="primary.300">
+      <Text testID="title" mb="8" variant="title3" color="primary.300">
         {name}
       </Text>
-      <Text maxW="2/3" textAlign="center" color="white">
+      <Text testID="subTitle" maxW="2/3" textAlign="center" color="white">
         This is the home screen. Open up your text editor and replace this text
         to start creating your first app!
       </Text>
       <Button mt="8" onPress={handleOpenModal}>
-        Open Modal
+        <Text>Open Modal</Text>
       </Button>
     </Center>
   )
