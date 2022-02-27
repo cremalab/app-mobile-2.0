@@ -5,19 +5,19 @@ import { MainStackParamList } from "../../types/Navigation"
 import ProfileScreen from "."
 
 describe("ProfileScreen", () => {
-  it("renders", async () => {
+  it("renders", () => {
     // Arrange
     const title = "Profile"
 
     // Act
-    const { queryByText } = render(
+    const { getByText } = render(
       <TestProvider<MainStackParamList>
         mockedScreen={{ name: "Profile", component: ProfileScreen }}
       />,
     )
-    const receivedTitle = queryByText(title)
+    const receivedTitle = getByText(title)
 
     // Assert
-    expect(receivedTitle).toBeDefined()
+    expect(receivedTitle).toBeTruthy()
   })
 })

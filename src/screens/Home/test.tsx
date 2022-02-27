@@ -5,23 +5,21 @@ import { MainStackParamList } from "../../types/Navigation"
 import HomeScreen from "."
 
 describe("HomeScreen", () => {
-  it("renders", async () => {
+  it("renders", () => {
     // Arrange
     const title = "Home"
     const subtitle =
       "This is the home screen. Open up your text editor and replace this text to start creating your first app!"
-
     // Act
-    const { queryByText } = render(
+    const { getByText } = render(
       <TestProvider<MainStackParamList>
         mockedScreen={{ name: "Home", component: HomeScreen }}
       />,
     )
-    const receivedTitle = queryByText(title)
-    const receivedSubtitle = queryByText(subtitle)
-
+    const receivedTitle = getByText(title)
+    const receivedSubtitle = getByText(subtitle)
     // Assert
-    expect(receivedTitle).toBeDefined()
-    expect(receivedSubtitle).toBeDefined()
+    expect(receivedTitle).toBeTruthy()
+    expect(receivedSubtitle).toBeTruthy()
   })
 })

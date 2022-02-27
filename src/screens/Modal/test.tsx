@@ -5,13 +5,13 @@ import { RootStackParamList } from "../../types/Navigation"
 import ModalScreen from "."
 
 describe("ModalScreen", () => {
-  it("renders", async () => {
+  it("renders", () => {
     // Arrange
     const title = "Modal"
     const message = "The coolest message you ever did see!"
 
     // Act
-    const { queryByText } = render(
+    const { getByText } = render(
       <TestProvider<RootStackParamList>
         mockedScreen={{
           name: "Modal",
@@ -20,11 +20,11 @@ describe("ModalScreen", () => {
         }}
       />,
     )
-    const receivedTitle = queryByText(title)
-    const receivedMessage = queryByText(message)
+    const receivedTitle = getByText(title)
+    const receivedMessage = getByText(message)
 
     // Assert
-    expect(receivedTitle).toBeDefined()
-    expect(receivedMessage).toBeDefined()
+    expect(receivedTitle).toBeTruthy()
+    expect(receivedMessage).toBeTruthy()
   })
 })
