@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react-native"
 import React from "react"
-import { TestProvider } from "../../testing"
+import { MockNavigator, TestProvider } from "../../testing"
 import { MainStackParamList } from "../../types/Navigation"
 import HomeScreen from "."
 
@@ -12,9 +12,9 @@ describe("HomeScreen", () => {
       "This is the home screen. Open up your text editor and replace this text to start creating your first app!"
     // Act
     const { getByText } = render(
-      <TestProvider<MainStackParamList>
-        mockedScreen={{ name: "Home", component: HomeScreen }}
-      />,
+      <TestProvider>
+        <MockNavigator<MainStackParamList> component={HomeScreen} name="Home" />
+      </TestProvider>,
     )
     const receivedTitle = getByText(title)
     const receivedSubtitle = getByText(subtitle)

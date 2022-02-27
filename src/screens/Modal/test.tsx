@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react-native"
 import React from "react"
-import { TestProvider } from "../../testing"
+import { MockNavigator, TestProvider } from "../../testing"
 import { RootStackParamList } from "../../types/Navigation"
 import ModalScreen from "."
 
@@ -12,13 +12,13 @@ describe("ModalScreen", () => {
 
     // Act
     const { getByText } = render(
-      <TestProvider<RootStackParamList>
-        mockedScreen={{
-          name: "Modal",
-          component: ModalScreen,
-          params: { message },
-        }}
-      />,
+      <TestProvider>
+        <MockNavigator<RootStackParamList>
+          component={ModalScreen}
+          name="Modal"
+          params={{ message }}
+        />
+      </TestProvider>,
     )
     const receivedTitle = getByText(title)
     const receivedMessage = getByText(message)
