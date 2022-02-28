@@ -19,7 +19,7 @@ This project includes configuration and tooling that conforms to Crema's baselin
 - [React Navigation](https://reactnavigation.org/) - for all that navigation goodness
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs/) - for near native performance with animations
 - [React Native Testing Library](https://callstack.github.io/react-native-testing-library/) for testing react-native components
-- [Storybook](https://storybook.js.org) for compostart visual
+- [Storybook](https://storybook.js.org) for component documentation/playground
 
 ## 👟👟 First Steps
 
