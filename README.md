@@ -19,7 +19,7 @@ This project includes configuration and tooling that conforms to Crema's baselin
 - [React Navigation](https://reactnavigation.org/) - for all that navigation goodness
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs/) - for near native performance with animations
 - [React Native Testing Library](https://callstack.github.io/react-native-testing-library/) for testing react-native components
-- [Storybook](https://storybook.js.org) for component playground
+- [Storybook](https://storybook.js.org) for compostart visual
 
 ## 👟👟 First Steps
 
@@ -61,3 +61,47 @@ Please note, expo-splash-screen has known issues on android, if after running th
 3. Customize SplashScreen: `npm run customize:splashscreen [options]` Click [here](https://github.com/expo/expo-cli/tree/master/unlinked-packages/configure-splash-screen#-usage) to see all available options.
 4. The default NativeBase theme is extended [here](./src/theme/index.tsx). Use the existing key/value pairs as suggestions and feel free to cater them towards your app's design system. NativeBase has some excellent defaults that you can get started with as well. If you wish to learn more about customizing the NativeBase theme, you can read more [here](https://docs.nativebase.io/customizing-theme).
 5. The default navigator is a tab navigator, but a drawer navigator has been built out as well. Simply comment it in, and delete references to the tab navigator. We've included 4 screens and a modal to get you started. You can very easily change the names and icons for each screen and start giving your app it's own identity.
+
+## 🏛 Structure
+
+The `src` directory is where the meat of your app is located. Below is a printout of its file-tree with a description for each part.
+
+```
+src
+├── assets // Fonts, Images, Etc.
+│   └── logo.svg
+├── components // Create a new one with `npm run new:component`
+│   └── ExampleComponent
+│       ├── README.md // Documentation
+│       ├── index.tsx // Main Module Code
+│       ├── stories.tsx // Playground stories (npm run start:visual)
+│       └── test.tsx // Unit Tests (Jest)
+├── hooks // Custom Hooks live here
+│   └── useSomeHook.ts
+├── navigation
+│   ├── index.ts // Navigation re-exports
+│   ├── RootNavigator.tsx
+│   ├── TabNavigator.tsx
+│   └── DrawerNavigator.tsx
+├── screens
+│   ├── Home
+│   │   ├── README.md // Documentation
+│   │   ├── index.tsx // Main Module Code
+│   │   ├── stories.tsx // Playground stories (npm run start:visual)
+│   │   └── test.tsx // Unit Tests (Jest)
+│   └── index.ts // Screens re-exports
+├── types // Centralized Type Definitions
+│   ├── Entity.ts // Base Type
+│   ├── EntityThing.ts // A Sub-Type
+│   ├── Id.ts // A Type Alias of `string`
+│   └── Thing.ts // Silly example used by `EntityThing`
+├── utils // Create a new one with `npm run new:util`
+│   └── exampleUtil // Utility directory
+│       ├── index.ts // Define and export the utility here
+│       ├── README.md // Document the utility
+│       └── test.ts // Test the utility
+├── stories // Directory used to load storybook stories in one place
+│   └── index.tsx
+├── App.tsx
+└── index.js // Root Module
+```
