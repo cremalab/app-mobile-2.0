@@ -113,4 +113,7 @@ buck-out/
 web-build/
 dist/
 
+#VS Code
+.vscode
+
 # @end expo-cli
