@@ -148,9 +148,9 @@ Run the following scripts with `npm run <SCRIPT_HERE>`:
 - `customize:splashscreen` - customize your app's splashscreen
 - `customize:makeityours` - remove existing android/ios directories and rebuild them with your own app name
 - `start` - start react-native server
-- `android` - build android app (will start react-native server if not running) 👉 be sure an android emulator is running 👈
+- `android` - build android app (will start react-native server if not running) 👉 be sure an android emulator is running
 - `ios` - build ios app and start simulator (will start react-native server if not running)
-- `web` - build for web 👉 please note that this repo is not configured for web, you'll have to set that up yourself 👈
+- `web` - build for web 👉 please note that this repo is not configured for web, you'll have to set that up yourself
 - `start:production` - explicity start server with NODE_ENV=production
 - `start:development` - explicity start server with NODE_ENV=development
 - `start:local` - explicity start server with NODE_ENV=local
