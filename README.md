@@ -130,9 +130,7 @@ Visual testing is done with a combination of Storybook and Loki and has a little
 2. Load the App onto any device you are testing.
 3. Add new stories by creating a stories.tsx anywhere in the root folder. i.e. (./src/Badge/Badge.stories.tsx)
 
-At this point clicking on one of the stories in the Web UI should display that story on any device that loaded the App onto.
-
-Story files are first placed in the same directory as the component and then imported into `src/stories/index.tsx`.
+At this point clicking on one of the stories in the Web UI should display that story on any device that loaded the App onto, or you can use the on device UI.
 
 _Notes:_
 
