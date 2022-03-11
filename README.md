@@ -80,7 +80,7 @@ If Android Studio is installed correctly you should be able to open an emulator 
 3. Click `AVD Manager` from the list of options
 4. Click `Launch this AVD in the Emulator` (It's the green play icon )
    - If there are no devices in the list then create one by clicking `Create Virtual Device`
-5. You should be able to launch the app on the Emulator from the Expo dev tools by pressing `a` in the terminal, clicking `Run on Android device/emulator`, or by starting the app with `npm run start:android`.
+5. You should be able to launch the app on the Emulator by starting the app with `npm run start:android`.
 
 - [Expo Docs - Android Studio Emulator](https://docs.expo.io/versions/v37.0.0/workflow/android-studio-emulator/)
 
