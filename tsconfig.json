@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
     "lib": [
       "dom",
       "esnext"
     ],
+    "paths": {
+      "@testing/*": ["testing/*"]
+    },
     "moduleResolution": "node",
     "noEmit": true,
     "skipLibCheck": true,
@@ -19,6 +23,7 @@
     "types": ["jest"]
   },
   "extends": "expo/tsconfig.base",
+  "include": ["src"],
   "exclude": [
     "node_modules",
     "babel.config.js",
@@ -26,5 +31,6 @@
     "jest.config.js",
     "./src/setupTests.ts",
     "__mocks__",
+    "_templates",
   ]
 }
