@@ -12,6 +12,7 @@ module.exports = {
     "setupTests.ts",
     "expo-test.js",
     "__mocks__",
+    "_templates",
   ],
   plugins: ["@typescript-eslint", "react", "react-native"],
   rules: {
