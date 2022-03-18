@@ -10,6 +10,7 @@ const config = {
   moduleNameMapper: {
     "^react-native-reanimated$":
       "<rootDir>/node_modules/react-native-reanimated/src/Animated.js",
+    "test-utils": "<rootDir>/src/testing/test-utils",
   },
 }
 

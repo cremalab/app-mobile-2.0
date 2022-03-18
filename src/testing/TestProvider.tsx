@@ -7,6 +7,7 @@ interface Props {
 }
 
 export default function TestProvider({ children }: Props) {
+  // add any context providers necessary for your tests to run
   return (
     <NativeBaseProvider
       initialWindowMetrics={{
