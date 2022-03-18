@@ -155,12 +155,11 @@ Visual testing is done with a combination of Storybook and Loki and has a little
 
 #### Start Storybook
 
-1. Expo needs to be started with the Storybook root, this is done by running `npm run start:visual`.
-1. Load the App onto any device you are testing.
+1. React-native needs to be started with the Storybook root, this is done by running npm run start:visual.
+2. Load the App onto any device you are testing.
+3. Add new stories by creating a stories.tsx anywhere in the root folder. i.e. (./src/Badge/Badge.stories.tsx)
 
-At this point clicking on one of the stories in the Web UI should display that story on any device that loaded the App onto.
-
-Story files are first placed in the same directory as the component and then imported into `src/stories/index.tsx`.
+At this point clicking on one of the stories in the Web UI should display that story on any device that loaded the App onto, or you can use the on device UI.
 
 _Notes:_
 
@@ -175,6 +174,10 @@ Run the following scripts with `npm run <SCRIPT_HERE>`:
 - `customize:icon` - customize your app's icon
 - `customize:splashscreen` - customize your app's splashscreen
 - `customize:makeityours` - remove existing android/ios directories and rebuild them with your own app name
+- `new:component` - generate a new component
+- `new:screen` - generate a new screen
+- `new:util` - generate a new util(ity)
+- `new:type` - generate a new type
 - `start` - start react-native server
 - `start:android` - build android app (will start react-native server if not running) 👉 be sure an android emulator is running
 - `start:ios` - build ios app and start simulator (will start react-native server if not running)
