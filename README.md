@@ -5,6 +5,31 @@
 
 This project includes configuration and tooling that conforms to Crema's baseline best-practices for a Mobile Application.
 
+# 📚 Table of Contents
+
+- Setting Up Your Environment
+  - [Tools Used](#🧰-tools-used)
+  - [First Steps](#👟👟-first-steps)
+- Running The App
+  - [Run](#▶-run)
+    - [Start React Native](#start-react-native)
+    - [iOS Simulator](#ios-simulator)
+    - [Android Emulator](#android-emulator)
+    - [Actual Device](#actual-device)
+- Customizing
+  - [Customizing Your App](#🎨-customizing-your-app)
+- Testing
+  - [Lint](#lint)
+  - [Types](#types)
+  - [Unit](#unit)
+  - [Visual](#visual)
+    - [Storybook](#start-storybook)
+- Scripts and Structure
+  - [Scripts](#⚙️-scripts)
+  - [Structure](#🏛-structure)
+
+#
+
 ## 🧰 Tools Used
 
 - [![Native Base Logo](./public/assets/nativebase.svg)](https://nativebase.io/) for super quick UI buildouts.
@@ -46,6 +71,8 @@ This project includes configuration and tooling that conforms to Crema's baselin
 }
 ```
 
+Steps 8 and 9 assume a macOS development environment. If you are developing on a windows machine, please see these [docs](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/react-native-for-android)
+
 8. Ensure that `XCode` and the related command line tools are setup using [this guide](https://docs.expo.io/versions/latest/workflow/ios-simulator/)
 9. Ensure that `Android Studio` and a virtual device (Emulator) are setup using [this guide](https://docs.expo.io/versions/v37.0.0/workflow/android-studio-emulator/)
 10. Ensure that `adb` is setup correctly, if you have followed step `9` it should be.
@@ -76,11 +103,13 @@ As long as XCode is setup correctly you should be able to start the Simulator di
 If Android Studio is installed correctly you should be able to open an emulator by following these steps:
 
 1. Open the Android Studio app
-2. Click the button `Configure` in the bottom right of the window
+2. Click the vertical dots button (kebab) on the top right of the window
 3. Click `AVD Manager` from the list of options
-4. Click `Launch this AVD in the Emulator` (It's the green play icon )
-   - If there are no devices in the list then create one by clicking `Create Virtual Device`
-5. You should be able to launch the app on the Emulator by starting the app with `npm run start:android`.
+4. If you haven't already, create a virtual device. As of this writing, the Pixel 5 API 31 is a good default.
+5. Under actions, select the green play button to start the device.
+6. You should be able to launch the app on the Emulator by starting the app with `npm run start:android`.
+
+- [Microsoft Docs - Android Studio Emulator](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/react-native-for-android)
 
 - [Expo Docs - Android Studio Emulator](https://docs.expo.io/versions/v37.0.0/workflow/android-studio-emulator/)
 
@@ -142,18 +171,18 @@ _Notes:_
 
 Run the following scripts with `npm run <SCRIPT_HERE>`:
 
-- `clear:cache` - start the react native server and clear metro cache
 - `customize:icon` - customize your app's icon
 - `customize:splashscreen` - customize your app's splashscreen
 - `customize:makeityours` - remove existing android/ios directories and rebuild them with your own app name
-- `start` - start react-native server
-- `android` - build android app (will start react-native server if not running) 👉 be sure an android emulator is running
-- `ios` - build ios app and start simulator (will start react-native server if not running)
-- `web` - build for web 👉 please note that this repo is not configured for web, you'll have to set that up yourself
 - `new:component` - generate a new component
 - `new:screen` - generate a new screen
 - `new:util` - generate a new util(ity)
 - `new:type` - generate a new type
+- `start` - start react-native server
+- `start:android` - build android app (will start react-native server if not running) 👉 be sure an android emulator is running
+- `start:ios` - build ios app and start simulator (will start react-native server if not running)
+- `start:web` - build for web 👉 please note that this repo is not configured for web, you'll have to set that up yourself
+- `start:clear:cache` - start the react native server and clear metro cache
 - `start:production` - explicity start server with NODE_ENV=production
 - `start:development` - explicity start server with NODE_ENV=development
 - `start:local` - explicity start server with NODE_ENV=local
