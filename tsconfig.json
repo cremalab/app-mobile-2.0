@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
     "lib": [
@@ -8,7 +7,7 @@
       "esnext"
     ],
     "paths": {
-      "@testing/*": ["testing/*"]
+      "test-utils": ["./src/testing/test-utils"]
     },
     "moduleResolution": "node",
     "noEmit": true,
@@ -23,7 +22,6 @@
     "types": ["jest"]
   },
   "extends": "expo/tsconfig.base",
-  "include": ["src"],
   "exclude": [
     "node_modules",
     "babel.config.js",

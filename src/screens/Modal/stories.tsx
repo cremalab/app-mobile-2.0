@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/react-native"
 import React from "react"
-import { MockNavigator } from "../../testing"
+import { MockNavigator } from "test-utils"
 import { RootStackParamList } from "../../types/Navigation"
 import ModalScreen from "."
 

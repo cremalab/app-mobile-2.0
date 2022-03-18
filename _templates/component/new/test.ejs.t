@@ -10,7 +10,7 @@ describe("<%= name %>", () => {
   it.todo(`add meaningful tests 👍`)
 })
 <% } else if(useState) { -%>
-import { render, fireEvent } from "@testing/testing-library"
+import { render, fireEvent } from "test-utils"
 import React from "react"
 describe("<%= name %>", () => {
   it("name prop is rendered", () => {
@@ -46,7 +46,7 @@ describe("<%= name %>", () => {
   })
 })
 <% } else { -%>
-import { render } from "@testing/testing-library"
+import { render } from "test-utils"
 import React from "react"
 describe("<%= name %>", () => {
   it("name prop is rendered", () => {
