@@ -2,7 +2,6 @@
   "main": "index.js",
   "scripts": {
     "build-storybook": "build-storybook",
-    "clear:cache": "npx react-native start --reset-cache",
     "customize:icon": "iconset create",
     "customize:splashscreen": "npx run expo-splash-screen",
     "customize:makeityours": "trash './ios' './android' 'app.json' && expo eject --npm",
