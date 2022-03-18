@@ -1,6 +1,7 @@
 import { RenderOptions, render } from "@testing-library/react-native"
 import { ReactElement } from "react"
-import { TestProvider } from "."
+import MockNavigator from "./MockNavigator"
+import TestProvider from "./TestProvider"
 
 const customRender = (
   component: ReactElement,
@@ -10,3 +11,5 @@ const customRender = (
 export * from "@testing-library/react-native"
 
 export { customRender as render }
+
+export { MockNavigator }
